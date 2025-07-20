@@ -1,5 +1,7 @@
 # SmolTable
 
+[![Go](https://img.shields.io/badge/language-Go-blue.svg)](https://golang.org)    [![Go Version](https://img.shields.io/badge/go%20version-1.22+-informational)](https://golang.org/dl/)   [![Project Stage](https://img.shields.io/badge/status-Alpha-orange)](#disclaimer)     [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
+
 > 🚧 **Status**: `Alpha – Expect changes, bugs, and beautiful chaos`
 
 **The Local Celebration Planner & Connector App**
