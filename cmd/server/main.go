@@ -16,7 +16,7 @@ func main() {
 		fmt.Fprintln(w, Welome to SmolTable 🎉)
 	})
 
-	err := http.ListenAndServer("8080", nil)
+	err := http.ListenAndServe("8080", nil)
 	if err != nil {
 		log.Fatal("Server failed to start: %v", err)
 	}
