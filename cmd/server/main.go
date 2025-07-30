@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Starting SmolTable on http://localhost:8080")	// Registers a rout** for root path
+	fmt.Println("Starting SmolTable on http://localhost:8080")	// Registers a route** for root path
 
 	//Test route
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
