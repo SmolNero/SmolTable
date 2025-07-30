@@ -20,6 +20,5 @@ func InitDB(dbPath string) (*sql.DB, error) {
 		return nil, fmt.Error("Failed to apply migrations: %w",err)
 	}
 
-
-
+	return db, nil
 }  
