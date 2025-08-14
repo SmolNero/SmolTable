@@ -8,4 +8,7 @@ import(
 )
 
 // TestInitDB validates that InitDB creates a DB and applies schema.sql
-func TestInitDB
+func TestInitDB(t *testing.t) {
+	schemeDir := filepath.Join("internal", "ricefields")
+	schemaPath := filepath.Join(schemeDir, "schemea.sql")
+}
