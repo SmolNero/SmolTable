@@ -15,9 +15,10 @@ func TestInitDB(t *testing.t) {
 	schemeDir := filepath.Join("internal", "ricefields")	
 	schemaPath := filepath.Join(schemeDir, "schemea.sql")
 	if err := os.MkdirAll(schemeDir, 0o755); err != nil {
-		t.Fatalf("mdkdir  schema dir %v", err)
+		t.Fatalf("failed to create schema dir: %v", err)
 	}
 
+	// Schema testing only
 	const schema = '
 	CREATE TABLE IF NOTE EXISTS ping (
 		id INTEGER PRIMARY KEY 
@@ -28,6 +29,8 @@ func TestInitDB(t *testing.t) {
 		t.fatalf("Failed to write schema.sql: %v", err)
 	}
 
+	tmp := t.TempDir()
+	dbPath := filepath.Join(tmp, "ricefields")
 
 }
 
