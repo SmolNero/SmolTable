@@ -16,5 +16,16 @@ func Init(dbPath string) (*sql.DB, error) {
 	if err != nil {
 		return nil, fmt.Errorf("open db: %W", err)
 	}
+	if err := migrate(d); err != nil {
+		d.Close()
+		return nil, err
+	}
+	return d, nil
 }
 
+func migrate(d *sql.DB) error {
+	if _, err := d.Exec(schema); err != nil{
+		return fmt.Errorf("exec schema: %W", err)
+	}
+	return nil
+}
